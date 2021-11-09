@@ -26,7 +26,7 @@ function createAboutHeader() {
 function createAboutContent() {
     const about = document.createElement('p');
     about.className = 'about';
-    about.innerHTML = "PizzaRona was established in 2019 to expose the world to our life altering Pizza. Over the last 2 years PizzaRona has spread across the globe and has invaded the homes of over 1million families. To get your taste of what everyone's talking about, check out our menu. For any questions or concerns please contact us, more information on our contact page."
+    about.innerHTML = "Pizza Rona was established in 2019 to expose the world to our life altering pizza. Over the last 2 years Pizza Rona has spread across the globe and has invaded the homes of over 1 million families. To get your taste of what everyone's talking about, check out our menu. For any questions or concerns please contact us via our contact page."
 
     return about;
 }
@@ -34,7 +34,7 @@ function createAboutContent() {
 
 function buildInfo(){
     const info = document.createElement('div');
-    info.id = 'info';
+    info.className = 'info';
 
     info.appendChild(createQuote());
     info.appendChild(createLogo());

@@ -1,4 +1,13 @@
 import pizza from './img/pizza.jpg';
+import buildHome from './homepage';
+import buildMenu from './menu';
+import buildContact from './contact';
+
+function reset(parent){
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 function createNavbar(page) {
     const navbar = document.createElement('div');
@@ -6,7 +15,7 @@ function createNavbar(page) {
     content.appendChild(navbar);
 
     const heading = document.createElement('h1');
-    heading.innerHTML = 'PIZZARONA';
+    heading.innerHTML = 'PIZZA RONA';
     navbar.appendChild(heading);
 
     const homeButton = document.createElement('button');
@@ -23,11 +32,29 @@ function createNavbar(page) {
 
     if (page === 'home') {
         homeButton.className = 'active';
-    } else if (page === 'menu') {
+    } if (page === 'menu') {
         menuButton.className = 'active';
-    } else if (page === 'contact') {
+    } if (page === 'contact') {
         contactButton.className = 'active';
     }
+
+    homeButton.addEventListener('click', () => {
+        reset(content);
+        initializeSite('home');
+        buildHome();
+    });
+
+    menuButton.addEventListener('click', () => {
+        reset(content);
+        initializeSite('menu');
+        buildMenu();
+    });
+
+    contactButton.addEventListener('click', () => {
+        reset(content)
+        initializeSite('contact')
+        buildContact();
+    });
 }
 
 function createBackground() {

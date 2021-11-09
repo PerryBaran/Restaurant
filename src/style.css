@@ -34,7 +34,7 @@ button {
     height: 100vh;
 }
 
-#info {
+.info {
     position: absolute;
     background: rgba(255, 255, 255, 0.425);
     padding: 20px;
@@ -82,4 +82,13 @@ button {
     width: auto;
     height: auto;
     z-index: -1;
+}
+
+.menu {
+    background: rgba(255, 0, 0, 0.521);
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 75px;
+    width: 75%;
+    max-width: 800px;
 }
