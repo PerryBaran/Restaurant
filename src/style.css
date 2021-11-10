@@ -6,13 +6,21 @@
     overflow-x: hidden;
 }
 
+
+/*Top Bar*/
 #navbar {
     position:fixed;
     width: 100%;
-    background: red;
-    color: green;
+    background: rgb(139, 1, 1);
     z-index: 10;
     text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 3rem;
+    padding: 5px;
 }
 
 button {
@@ -20,12 +28,80 @@ button {
     padding-left: 20px;
     width: 30%;
     cursor: pointer;
+    color: rgb(139, 1, 1);
+    font-weight: bold;
+    border: none;
+    border-left: 1px solid rgb(139, 1, 1);
+    border-right: 1px solid rgb(139, 1, 1);
+    border-bottom: 1px solid white;
+}
+
+#left {
+    border-top-left-radius: 10px;
+}
+
+#right {
+    border-top-right-radius: 10px;
 }
 
 .active {
-    background: blue;
+    color: white;
+    background: none;
+    border: 1px solid white;
 }
 
+/*Bottom bar */
+#bottombar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(139, 1, 1);
+    z-index: 10;
+    padding-top: 5px;
+}
+
+.attribution {
+    display: inline-flex;
+    color: white;
+    padding: 5px;
+    font-size: 0.95rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a:active {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    text-decoration: underLine;
+}
+
+/*Pizza Picture Background*/
+#background {
+    position: fixed;
+    bottom: 0;
+    max-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+/*Main Content*/
 #container {
     display: flex;
     justify-content: center;
@@ -39,56 +115,113 @@ button {
     background: rgba(255, 255, 255, 0.425);
     padding: 20px;
     width: 100%;
-    text-align: center;  
+    max-width: 800px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.about {
-    margin: auto;
-    width: 70%;
-    max-width: 400px;
-}
-
-#man {
-    width: 300px;
-    border-radius: 200px;
+/*Homepage*/
+.quote {
+    font-size: 1.4rem;
 }
 
 .quote::before {
-    content: open-quote
+    content: open-quote;
+    font-size: 2rem;
+    color: rgb(51, 51, 51);
 }
 
 .quote::after{
-    content: close-quote
+    content: close-quote;
+    font-size: 2rem;
+    color:rgb(51, 51, 51);
 }
 
-#bottombar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: red;
-    z-index: 10;
+#man {
+    width: 250px;
+    border-radius: 200px;
+    border: 2px solid rgba(139, 1, 1, 0.425);
+    margin: 10px;
 }
 
-.attribution {
-    color: white;
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    padding: 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
 }
 
-#background {
-    position: fixed;
-    bottom: 0;
-    max-height: 100%;
-    min-width: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
+.about {
+    padding-top: 5px;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
 }
 
+/*Menu and items*/
 .menu {
-    background: rgba(255, 0, 0, 0.521);
+    background:rgba(255, 255, 255, 0.425);
     margin: auto;
     margin-top: 100px;
-    margin-bottom: 75px;
+    margin-bottom: 60px;
     width: 75%;
     max-width: 800px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+}
+
+h4 {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.description {
+    display: inline-flex;
+    padding-bottom: 0.8em;
+    width: calc(100% - 90px);
+}
+
+.price {
+    display: inline-flex;
+    float: right;
+}
+
+/*Contact*/
+.contactHeader {
+    display: inline-flex;
+    width: 100px;
+}
+
+.contactDetails {
+    display: inline-flex;
+    width: 45%;
+}
+
+iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    border: none;
+}
+
+@media screen and (max-height: 700px) {
+    #man {
+        width: 150px;
+    }
+
+    iframe {
+        height: 200px;
+    }
 }

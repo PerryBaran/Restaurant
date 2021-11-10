@@ -20,6 +20,7 @@ function createNavbar(page) {
 
     const homeButton = document.createElement('button');
     homeButton.innerHTML = 'HOME';
+    homeButton.id = 'left'
     navbar.appendChild(homeButton);
 
     const menuButton = document.createElement('button');
@@ -28,6 +29,7 @@ function createNavbar(page) {
 
     const contactButton = document.createElement('button');
     contactButton.innerHTML = 'CONTACT';
+    contactButton.id = 'right'
     navbar.appendChild(contactButton);
 
     if (page === 'home') {
